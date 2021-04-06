@@ -954,12 +954,35 @@ contract Spore1155NFT is Context, AccessControlEnumerable, ERC1155Burnable, ERC1
 
 contract NFTSale is AccessControl, ReentrancyGuard, Pausable {
     
-    IERC20 public usdt = IERC20(0xBE4549A9116D238A835a983eb4BfE4d78b077E89); //rinkeby
-    IERC20 public usdc = IERC20(0xF32086dF97DBaD2E37BE1E6cc31cE3586DC8b1E8); //rinkeby
-    IERC20 public busd = IERC20(0x40C5bBbcC04de51d1a8667786C3b26Cedbd59662); //rinkeby
-    IERC20 public dai = IERC20(0x3e9e2F2829467d034Ca1d6F6AB30a3422D00b983); //rinkeby
+    /**
+     * Rinkeby: 0xBE4549A9116D238A835a983eb4BfE4d78b077E89
+     * BSC: 0x55d398326f99059fF775485246999027B3197955
+     */
+    IERC20 public usdt = IERC20(0x55d398326f99059fF775485246999027B3197955);
     
-    Spore1155NFT public _SporeNFT = Spore1155NFT(0x8d71B155B9E2FB34239e5581C7Bbd383e897368F); //rinkeby
+    /**
+     * Rinkeby: 0xF32086dF97DBaD2E37BE1E6cc31cE3586DC8b1E8
+     * BSC: 0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d
+     */
+    IERC20 public usdc = IERC20(0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d);
+    
+    /**
+     * Rinkeby: 0x40C5bBbcC04de51d1a8667786C3b26Cedbd59662
+     * BSC: 0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56
+     */
+    IERC20 public busd = IERC20(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56);
+    
+    /**
+     * Rinkeby: 0x3e9e2F2829467d034Ca1d6F6AB30a3422D00b983
+     * BSC: 0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3
+     */
+    IERC20 public dai = IERC20(0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3);
+    
+    /**
+     * Rinkeby: 0x8d71B155B9E2FB34239e5581C7Bbd383e897368F
+     * BSC: 0x379103AE932c7eed64913E53a0121A0495f30d36
+     */
+    Spore1155NFT public _SporeNFT = Spore1155NFT(0x379103AE932c7eed64913E53a0121A0495f30d36);
     
     mapping(uint256 => uint256) public _NFTPrices;
     
