@@ -364,4 +364,14 @@ contract Chieftains is AccessControl, ReentrancyGuard, Pausable {
         
         emit DeleteChieftain(addr);
     }
+    
+    function pause() public virtual {
+        require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "must have admin role");
+        _pause();
+    }
+
+    function unpause() public virtual {
+        require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "must have admin role");
+        _unpause();
+    }
 }
